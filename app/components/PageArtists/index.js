@@ -5,7 +5,7 @@ import ArtistsList from './ArtistsList'
 class PageArtists extends Component {
   constructor(props) {
     super()
-    
+
     this.state = {
       query: ''
     }
@@ -19,7 +19,11 @@ class PageArtists extends Component {
     return (
       <section>
         <SearchForm onChange={this.onSearch.bind(this)}></SearchForm>
-        <ArtistsList query={this.state.query}></ArtistsList>
+        {this.state.query !== ''
+          ? <ArtistsList query={this.state.query}></ArtistsList>
+          : null
+        }
+
       </section>
     )
   }

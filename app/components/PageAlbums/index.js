@@ -38,7 +38,7 @@ class PageAlbums extends Component {
     if (albums) {
       return (
         <article className="Artists">
-          <h1></h1>
+          <h1>{albums[0].artists[0].name}</h1>
           { !albums.length
             ? <p>Albums not found.</p>
             : <section>

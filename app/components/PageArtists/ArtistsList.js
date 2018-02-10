@@ -67,6 +67,10 @@ class ArtistsList extends Component {
   render() {
     const {artists, loading} = this.state
 
+    if (loading) {
+      return <CircularProgress />
+    }
+
     if (artists) {
       return (
         <article className="Artists">
@@ -84,11 +88,7 @@ class ArtistsList extends Component {
       </article>)
     }
 
-    if (loading) {
-      return <CircularProgress />
-    }
-
-    return <p>Something went wrong. Try to reload page.</p>
+    return null
   }
 }
 

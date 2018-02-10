@@ -18,8 +18,6 @@ class App extends Component {
       <MuiThemeProvider>
         <section className="App">
 
-          <AppBar title="ToushTunes Search Music"></AppBar>
-
           <Router>
             <section>
               <Route exact path="/" component={PageArtists} />

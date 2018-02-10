@@ -1,20 +1,21 @@
 import React, { Component } from 'react'
-import {Card, CardTitle, CardText} from 'material-ui/Card'
+import Paper from 'material-ui/Paper'
 import {
   Link
 } from 'react-router-dom'
+
+import './index.css'
 
 function Artists(props) {
   const {name, id, images} = props.artist
 
   return (
     <Link to={`/albums/${id}`}>
-      <Card className=''>
+      <Paper className="Artist-card">
+        <img width="64" src={images.length ? images[2].url : 'http://via.placeholder.com/150x150'} />
 
-        <img src={images.length ? images[2].url : ''} />
-
-        <CardText>{name}</CardText>
-      </Card>
+        {name}
+      </Paper>
     </Link>
   )
 
