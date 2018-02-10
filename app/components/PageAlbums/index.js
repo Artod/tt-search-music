@@ -4,6 +4,8 @@ import CircularProgress from 'material-ui/CircularProgress'
 
 import Album from './Album'
 
+import './index.css'
+
 class PageAlbums extends Component {
 
   constructor(props) {
@@ -37,11 +39,11 @@ class PageAlbums extends Component {
 
     if (albums) {
       return (
-        <article className="Artists">
+        <article className="PageAlbums">
           <h1>{albums[0].artists[0].name}</h1>
           { !albums.length
             ? <p>Albums not found.</p>
-            : <section>
+            : <section className="PageAlbums-flexContainer">
 
                 { albums.map(album => (
                   <Album key={album.id} album={album} />

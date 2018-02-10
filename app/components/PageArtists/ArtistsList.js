@@ -77,7 +77,7 @@ class ArtistsList extends Component {
 
           { !artists.length
             ? <p>Artists not found.</p>
-            : <section>
+            : <section className="Artists-flexContainer">
 
                 { artists.map(artist => (
                   <Artist key={artist.id} artist={artist} />

@@ -9,15 +9,3 @@
 .App a:link {
     text-decoration: none;
 }
-
-.App a:visited {
-    text-decoration: none;
-}
-
-.App a:hover {
-    text-decoration: underline;
-}
-
-.App a:active {
-    text-decoration: underline;
-}
