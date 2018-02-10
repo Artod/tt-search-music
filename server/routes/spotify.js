@@ -18,15 +18,15 @@ router.get('/artists', cors(), function(req, res, next) {
 });
 
 router.get('/albums/:artist_id', cors(), function(req, res, next) {
-  spotify.search({ type: 'album', artist_id: Number(req.params.artist_id) }).then(function(response) {
+  spotify.request(`https://api.spotify.com/v1/artists/${req.params.artist_id}/albums`).then(function(response) {
     res.json(response);
   }).catch(function(err) {
-    res.sendStatus(404);
+    res.send(err);
   });
 });
 
 router.get('/tracks/:album_id', cors(), function(req, res, next) {
-  spotify.search({ type: 'track', album_id: Number(req.query.album_id) }).then(function(response) {
+  spotify.search({ type: 'track', album_id: req.query.album_id }).then(function(response) {
     res.json(response);
   }).catch(function(err) {
     res.sendStatus(404);

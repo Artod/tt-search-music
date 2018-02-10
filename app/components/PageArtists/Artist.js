@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
 import {Card, CardTitle, CardText} from 'material-ui/Card'
+import {
+  Link
+} from 'react-router-dom'
 
 function Artists(props) {
   const {name, id, images} = props.artist
 
   return (
-    <Card className=''>
+    <Link to={`/albums/${id}`}>
+      <Card className=''>
 
-      <img src={images.length ? images[2].url : ''} />
+        <img src={images.length ? images[2].url : ''} />
 
-      <CardText>{name}</CardText>
-    </Card>
+        <CardText>{name}</CardText>
+      </Card>
+    </Link>
   )
 
 }

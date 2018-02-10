@@ -11,7 +11,6 @@ import './index.css'
 
 import PageArtists from '../PageArtists'
 import PageAlbums from '../PageAlbums'
-import PageTracks from '../PageTracks'
 
 class App extends Component {
   render() {
@@ -24,8 +23,7 @@ class App extends Component {
           <Router>
             <section>
               <Route exact path="/" component={PageArtists} />
-              <Route path="/artist/:id" component={PageAlbums} />
-              <Route path="/albums/:id" component={PageTracks} />
+              <Route path="/albums/:id" component={PageAlbums} />
             </section>
           </Router>
 
