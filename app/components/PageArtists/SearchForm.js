@@ -25,13 +25,13 @@ class SearchForm extends Component {
 
     return (
       <section className="SearchForm">
-          <TextField
-            name="name"
-            autoComplete="off"
-            placeholder="Search by an artist"
-            ref={input => this.inputName = input}
-            onChange={this.onChange.bind(this)}
-          />
+        <TextField
+          name="name"
+          autoComplete="off"
+          placeholder="Search by an artist"
+          ref={input => this.inputName = input}
+          onChange={this.onChange.bind(this)}
+        />
       </section>
     )
 

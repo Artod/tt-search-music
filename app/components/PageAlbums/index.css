@@ -1,0 +1,37 @@
+.Album {
+  padding:10px;
+  margin:10px;
+  cursor: pointer;
+  text-align: center;
+  width: 300px;
+}
+
+.Album img {
+  padding-bottom: 10px;
+
+  max-width: 300px;
+}
+
+.Album-name {
+  padding-bottom: 10px;
+}
+
+.Album-genre {
+  color: grey;
+}
+
+.PageAlbums h1 {
+  color:grey;
+  border-bottom: 1px solid grey;
+}
+
+.PageAlbums-flexContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.PageAlbums-flexContainer > .Album {
+  flex: 1 1 300px;
+}

@@ -1,0 +1,29 @@
+.Artist-card {
+  padding:10px;
+  margin:10px;
+}
+
+.Artist-card img {
+  vertical-align: top;
+  padding-right: 10px;
+  height: 64px;
+
+  display: inline-block;
+  float:left;
+}
+
+
+.clear {
+  clear:both;
+}
+
+.Artists-flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: top;
+}
+
+.Artists-flexContainer > .Artist {
+  flex: 1 1 300px;
+}
