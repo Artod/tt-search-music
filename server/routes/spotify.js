@@ -26,10 +26,10 @@ router.get('/albums/:artist_id', cors(), function(req, res, next) {
 });
 
 router.get('/tracks/:album_id', cors(), function(req, res, next) {
-  spotify.search({ type: 'track', album_id: req.query.album_id }).then(function(response) {
+  spotify.request(`https://api.spotify.com/v1/albums/${req.params.album_id}/tracks`).then(function(response) {
     res.json(response);
   }).catch(function(err) {
-    res.sendStatus(404);
+    res.send(err);
   });
 });
 
